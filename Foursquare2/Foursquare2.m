@@ -1415,7 +1415,7 @@ static NSMutableDictionary *attributes;
     NSDictionary *dic = [self classAttributes];
     NSString *key = dic[kFOURSQUARE_CLIET_ID];
     NSString *callbackURL = dic[kFOURSQUARE_CALLBACK_URL];
-    FSOAuthStatusCode statusCode = [FSOAuth authorizeUserUsingClientId:key callbackURIString:callbackURL];
+    FSOAuthStatusCode statusCode = [FSOAuth authorizeUserUsingClientId:key callbackURIString:callbackURL allowShowingAppStore:NO];
     if (statusCode == FSOAuthStatusSuccess) {
         return YES;
     }
